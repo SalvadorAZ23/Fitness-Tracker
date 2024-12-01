@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'JetBrains Mono', monospace;
+    color: #e2b714;
+}
+
+body {
+    background-color: #323437;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #2c2e31;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #e2b714;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #646669;
+    font-weight: 400;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    background-color: #232427;
+    border: 1px solid #424242;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #d1d0c5;
+    transition: all 0.3s ease;
+}
+input[type="date"] {
+    background-color: #232427;
+    color-scheme: dark; /* This helps with the calendar popup on supported browsers */
+}
+
+/* Webkit specific calendar styles */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #232427;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    filter: invert(1); /* Makes the calendar icon white */
+}
+
+input[type="date"]::-webkit-datetime-edit-fields-wrapper {
+    color: #d1d0c5;
+}
+
+input[type="date"]::-webkit-datetime-edit {
+    color: #d1d0c5;
+}
+
+input[type="date"]::-webkit-datetime-edit-text {
+    color: #646669;
+    padding: 0 0.3em;
+}
+
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+    color: #d1d0c5;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #e2b714;
+    box-shadow: 0 0 0 2px rgba(226, 183, 20, 0.2);
+}
+
+button {
+    background-color: #e2b714;
+    color: #232427;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #f0c419;
+    transform: translateY(-1px);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.stat-card {
+    background-color: #232427;
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #424242;
+}
+
+.stat-card h3 {
+    color: #646669;
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.stat-card p {
+    color: #e2b714;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.chart-container {
+    margin-top: 40px;
+    height: 300px;
+    background-color: #232427;
+    border-radius: 10px;
+    padding: 20px;
+    border: 1px solid #424242;
+}
+
+#activity-list {
+    margin-top: 40px;
+}
+
+.activity-item {
+    background-color: #232427;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #424242;
+    transition: all 0.3s ease;
+}
+
+.activity-item:hover {
+    border-color: #e2b714;
+    transform: translateX(4px);
+}
+
+.activity-item button {
+    width: auto;
+    padding: 8px 16px;
+    background-color: #ca3e47;
+    color: #fff;
+    margin-left: 16px;
+    font-size: 0.9rem;
+}
+
+.activity-item button:hover {
+    background-color: #e94e4e;
+}
+
+.activity-info {
+    flex-grow: 1;
+    color: #d1d0c5;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+}
